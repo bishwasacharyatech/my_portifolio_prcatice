@@ -1,130 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bishwas Acharya | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bishwas Acharya | Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <header>
-    <h1>Bishwas Acharya</h1>
-    <p>BCA Student | Aspiring <span>Cyber Security</span> Professional</p>
-<img src="profilepic.jpg" alt="Bishwas Acharya" class="profile-img">
-
+<header>
+  <h1>Bishwas Acharya</h1>
+  <p>BCA Student | Aspiring <span>Cyber Security</span> Professional</p>
+  <img src="profilepic.jpg" alt="Bishwas Acharya" class="profile-img">
 </header>
 
-  <nav>
-    <a href="#about">About</a>
-    
-    <a href="#education">Education</a>
-    <a href="#skills">Learning</a>
-    <a href="#goals">Goals</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<nav>
+  <a href="#about">About</a>
+  <a href="#education">Education</a>
+  <a href="#skills">Learning</a>
+  <a href="#goals">Goals</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      Hello! My name is <strong>Bishwas Acharya</strong>. I am a BCA Semester I student.
-      I am passionate about technology and my goal is to build a career in
-      <strong>Cyber Security and Ethical Hacking</strong>.
-    </p>
-    <p>
-      I have recently started my journey in programming and web development.
-      I enjoy learning how systems work, exploring security concepts,
-      and improving my technical knowledge step by step.
-    </p>
-
-  </section>
-
-
-  <section id="education">
-    <h2>Education</h2>
-    <p><strong>Degree:</strong> Bachelor of Computer Applications (BCA)</p>
-    <p><strong>Semester:</strong> I</p>
-  </section>
-
-  <section id="skills">
-    <h2>Currently Learning</h2>
-    <ul>
-      <li>Java Programming</li>
-      <li>HTML & CSS</li>
-      <li>JavaScript (Basics)</li>
-      <li>Linux (Ubuntu)</li>
-      <li>C Programming</li>
-      <li>GitHub</li>
-      <li>VS Code</li>
-      <li>Cyber Security & Ethical Hacking (Beginner)</li>
-    </ul>
-
-    <p class="note">
-      ⚠️ I am a beginner and currently building my skills through learning and practice.
-    </p>
-  </section>
-  <section id="cyber">
-  <h2>Cyber Security Focus</h2>
-
+<section id="about">
+  <h2>About Me</h2>
   <p>
-    I am currently building a strong foundation in cyber security by
-    understanding how systems, networks, and applications work and
-    where security vulnerabilities arise.
-  </p>
-
-  <ul>
-    <li>Basic understanding of Cyber Security principles</li>
-    <li>Introduction to Ethical Hacking concepts</li>
-    <li>Linux fundamentals for security usage</li>
-    <li>Awareness of common vulnerabilities (XSS, SQL Injection, CSRF)</li>
-    <li>Learning safe and ethical security practices</li>
-  </ul>
-
-  <p class="note">
-    ⚠️ Currently focused on learning fundamentals before advanced exploitation.
+    Hello! I am <strong>Bishwas Acharya</strong>, a BCA Semester I student
+    passionate about <strong>Cyber Security & Ethical Hacking</strong>.
   </p>
 </section>
 
-  <section id="goals">
-  <h2>Goals & Aspirations</h2>
+<section id="education">
+  <h2>Education</h2>
+  <p>Bachelor of Computer Applications (BCA) – Semester I</p>
+</section>
+
+<section id="skills">
+  <h2>Currently Learning</h2>
   <ul>
-    <li>Become a certified ethical hacker</li>
-    <li>Build my own cyber security tools</li>
-    <li>Contribute to open-source projects on GitHub</li>
-    <li>Master web development & programming languages</li>
+    <li>Java, C Programming</li>
+    <li>HTML, CSS, JavaScript</li>
+    <li>Linux (Ubuntu)</li>
+    <li>Git & GitHub</li>
+    <li>Cyber Security Basics</li>
   </ul>
 </section>
 
-</section> <!-- end of about -->
-
-<section id="hobbies">
-  <h2>Hobbies & Interests</h2>
-  <p>
-    I enjoy exploring technology, playing video games, solving puzzles,
-    and learning new programming concepts.
-  </p>
+<section id="goals">
+  <h2>Goals</h2>
+  <ul>
+    <li>Certified Ethical Hacker</li>
+    <li>Build Cyber Security Tools</li>
+    <li>Open Source Contributions</li>
+  </ul>
 </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>No Projects Yet</h3>
-      <p>
-        I am currently learning and will add projects soon as I gain more experience
-        in web development and programming.
-      </p>
+<!-- FLIP BOOK -->
+<input type="checkbox" id="c1">
+<input type="checkbox" id="c2">
+<input type="checkbox" id="c3">
+
+<div class="scene">
+  <div class="book">
+
+    <div class="page" id="p1">
+      <div class="side">
+        <h2>Cyber Journey</h2>
+        <p>Learning fundamentals of cyber security.</p>
+        <label for="c1" class="next">Next →</label>
+      </div>
+      <div class="side back">
+        <h2>Linux</h2>
+        <p>Ubuntu & security basics.</p>
+        <label for="c1" class="prev">← Back</label>
+      </div>
     </div>
-  </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <strong>bishwasacharya.tech@gmail.com</strong></p>
-  </section>
+    <div class="page" id="p2">
+      <div class="side">
+        <h2>Web Dev</h2>
+        <p>HTML, CSS, JS foundations.</p>
+        <label for="c2" class="next">Next →</label>
+      </div>
+      <div class="side back">
+        <h2>Ethics</h2>
+        <p>Safe & ethical hacking mindset.</p>
+        <label for="c2" class="prev">← Back</label>
+      </div>
+    </div>
 
-  <footer>
-    <p>© 2026 Bishwas Acharya | All Rights Reserved</p>
-  </footer>
+    <div class="page" id="p3">
+      <div class="side">
+        <h2>Future</h2>
+        <p>Cyber Security Professional.</p>
+        <label for="c3" class="next">Finish</label>
+      </div>
+      <div class="side back">
+        <h2>Thank You</h2>
+        <p>Journey continues.</p>
+        <label for="c3" class="prev">← Back</label>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="project">
+    <p>Projects coming soon 🚀</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <strong>bishwasacharya.tech@gmail.com</strong></p>
+</section>
+
+<footer>
+  <p>© 2026 Bishwas Acharya</p>
+</footer>
 
 </body>
 </html>

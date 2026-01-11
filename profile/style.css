@@ -1,29 +1,113 @@
+/* RESET */
 *{
   margin:0;
+  padding:0;
   box-sizing:border-box;
 }
+
+/* BODY */
 body{
-  height:100vh;
+  font-family:system-ui, sans-serif;
+  background:#020617;
+  color:#e5e7eb;
+  line-height:1.6;
+}
+
+/* HEADER */
+header{
+  text-align:center;
+  padding:40px 20px;
+}
+
+header h1{
+  font-size:32px;
+}
+
+header span{
+  color:#38bdf8;
+}
+
+.profile-img{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  margin-top:15px;
+  object-fit:cover;
+  border:3px solid #38bdf8;
+}
+
+/* NAV */
+nav{
   display:flex;
   justify-content:center;
-  align-items:center;
+  gap:20px;
+  padding:15px;
   background:#020617;
-  font-family:system-ui;
-  color:#e5e7eb;
+  position:sticky;
+  top:0;
 }
+
+nav a{
+  color:#60a5fa;
+  text-decoration:none;
+  font-size:14px;
+}
+
+nav a:hover{
+  color:#38bdf8;
+}
+
+/* SECTIONS */
+section{
+  max-width:900px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+h2{
+  color:#38bdf8;
+  margin-bottom:10px;
+}
+
+ul{
+  padding-left:20px;
+}
+
+.note{
+  margin-top:10px;
+  color:#facc15;
+}
+
+/* PROJECT */
+.project{
+  background:#0f172a;
+  padding:20px;
+  border-radius:10px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  opacity:.6;
+}
+
+/* ===== FLIP BOOK ===== */
 input{display:none}
 
-/* Scene */
 .scene{
+  display:flex;
+  justify-content:center;
+  margin:60px 0;
   perspective:2500px;
 }
+
 .book{
   width:340px;
   height:480px;
   position:relative;
 }
 
-/* Pages */
 .page{
   position:absolute;
   inset:0;
@@ -32,6 +116,7 @@ input{display:none}
   border-radius:14px;
   box-shadow:0 25px 60px rgba(0,0,0,.6);
 }
+
 .side{
   position:absolute;
   inset:0;
@@ -39,16 +124,11 @@ input{display:none}
   backface-visibility:hidden;
   background:linear-gradient(145deg,#0f172a,#020617);
 }
+
 .back{
   transform:rotateY(180deg);
 }
 
-/* Typography */
-h1{font-size:24px;margin-bottom:10px}
-h2{font-size:18px;color:#38bdf8}
-p{font-size:14px;opacity:.85;margin-top:4px}
-
-/* Navigation */
 .next,.prev{
   position:absolute;
   bottom:18px;
@@ -56,16 +136,16 @@ p{font-size:14px;opacity:.85;margin-top:4px}
   cursor:pointer;
   color:#60a5fa;
 }
+
 .next{right:20px}
 .prev{left:20px}
 
-/* Stack order */
-#p1{z-index:4}
-#p2{z-index:3}
-#p3{z-index:2}
-#p4{z-index:1}
+/* STACK */
+#p1{z-index:3}
+#p2{z-index:2}
+#p3{z-index:1}
 
-/* Flip logic */
+/* FLIP LOGIC */
 #c1:checked ~ .scene .book #p1{
   transform:rotateY(-180deg);
 }
@@ -73,8 +153,5 @@ p{font-size:14px;opacity:.85;margin-top:4px}
   transform:rotateY(-180deg);
 }
 #c3:checked ~ .scene .book #p3{
-  transform:rotateY(-180deg);
-}
-#c4:checked ~ .scene .book #p4{
   transform:rotateY(-180deg);
 }
