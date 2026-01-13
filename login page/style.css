@@ -1,0 +1,109 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* BACKGROUND */
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* LOGIN CARD */
+.login-box {
+  width: 360px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 30px rgba(0,0,0,0.4);
+  animation: slideFade 1s ease forwards;
+  transform: translateY(40px);
+  opacity: 0;
+}
+
+/* ANIMATION */
+@keyframes slideFade {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.login-box h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* INPUT */
+.input-box {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #aaa;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.input-box label {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  pointer-events: none;
+  transition: 0.4s;
+}
+
+/* FLOATING LABEL */
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -8px;
+  color: #00e6ff;
+  font-size: 12px;
+}
+
+/* BUTTON */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #00e6ff, #0072ff);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+button:hover {
+  letter-spacing: 1px;
+  box-shadow: 0 0 15px #00e6ff;
+}
+
+/* REGISTER TEXT */
+.register {
+  text-align: center;
+  margin-top: 20px;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.register a {
+  color: #00e6ff;
+  text-decoration: none;
+}
