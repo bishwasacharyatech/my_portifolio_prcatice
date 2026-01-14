@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Profile Card Hover Social Icons</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:radial-gradient(circle at top,#1a1f3c,#060814);
+}
+
+/* CARD */
+.card{
+  width:320px;
+  border-radius:22px;
+  padding:20px;
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(18px);
+  box-shadow:0 25px 60px rgba(0,0,0,.6);
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  transition:.6s;
+}
+
+.card:hover{
+  transform:translateY(-14px);
+}
+
+/* IMAGE */
+.img-box{
+  width:130px;
+  height:130px;
+  margin:10px auto 12px;
+  border-radius:50%;
+  overflow:hidden;
+  border:3px solid rgba(255,255,255,.25);
+}
+
+.img-box img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* TEXT */
+h2{
+  color:#fff;
+  font-size:22px;
+  margin-top:10px;
+}
+
+.role{
+  color:#9aa4ff;
+  font-size:14px;
+  margin-bottom:14px;
+}
+
+.bio{
+  color:#cfd3ff;
+  font-size:14px;
+  line-height:1.6;
+}
+
+/* SOCIAL BAR */
+.social{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-70px;
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  transition:.6s cubic-bezier(.2,.8,.2,1);
+}
+
+.card:hover .social{
+  bottom:25px;
+}
+
+/* ICONS */
+.social a{
+  width:44px;
+  height:44px;
+  background:rgba(255,255,255,.15);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:50%;
+  text-decoration:none;
+  font-size:18px;
+  color:#fff;
+  backdrop-filter:blur(10px);
+  transition:.4s;
+}
+
+.social a:hover{
+  transform:scale(1.2);
+  background:linear-gradient(135deg,#6f7cff,#00ffd5);
+  color:#000;
+}
+
+/* IMAGE SOURCE */
+</style>
+
+<!-- ICONS CDN -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+</head>
+<body>
+
+<div class="card">
+
+  <div class="img-box">
+    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="girl">
+  </div>
+
+  <h2>Emily Carter</h2>
+  <p class="role">UI / UX Designer</p>
+
+  <p class="bio">
+    Creating modern interfaces & smooth digital experiences.
+  </p>
+
+  <!-- SOCIAL ICONS -->
+  <div class="social">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+
+</div>
+
+</body>
+</html>

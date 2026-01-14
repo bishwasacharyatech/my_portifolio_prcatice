@@ -1,19 +1,42 @@
-/* RESET */
+/* ===== RESET ===== */
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
 }
 
-/* BODY */
-body{
-  font-family:system-ui, sans-serif;
-  background:#020617;
-  color:#e5e7eb;
-  line-height:1.6;
+/* ===== CSS VARIABLES ===== */
+:root {
+  --bg-color: #f9f9f9;
+  --text-color: #020617;
+  --primary-color: #38bdf8;
+  --nav-bg: #f9f9f9;
+  --card-bg: #f1f5f9;
+  --project-bg: #e2e8f0;
+  --shadow-color: rgba(0,0,0,0.15);
 }
 
-/* HEADER */
+body.dark-mode {
+  --bg-color: #020617;
+  --text-color: #e5e7eb;
+  --primary-color: #38bdf8;
+  --nav-bg: #020617;
+  --card-bg: #0f172a;
+  --project-bg: #0f172a;
+  --shadow-color: rgba(0,0,0,0.6);
+}
+
+/* ===== BODY ===== */
+body{
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height:1.6;
+  font-family: 'Segoe UI', sans-serif;
+  transition: all 0.5s ease;
+  min-height: 100vh;
+}
+
+/* ===== HEADER ===== */
 header{
   text-align:center;
   padding:40px 20px;
@@ -24,7 +47,7 @@ header h1{
 }
 
 header span{
-  color:#38bdf8;
+  color: var(--primary-color);
 }
 
 .profile-img{
@@ -33,16 +56,16 @@ header span{
   border-radius:50%;
   margin-top:15px;
   object-fit:cover;
-  border:3px solid #38bdf8;
+  border:3px solid var(--primary-color);
 }
 
-/* NAV */
+/* ===== NAV ===== */
 nav{
   display:flex;
   justify-content:center;
   gap:20px;
   padding:15px;
-  background:#020617;
+  background: var(--nav-bg);
   position:sticky;
   top:0;
 }
@@ -54,10 +77,10 @@ nav a{
 }
 
 nav a:hover{
-  color:#38bdf8;
+  color: var(--primary-color);
 }
 
-/* SECTIONS */
+/* ===== SECTIONS ===== */
 section{
   max-width:900px;
   margin:auto;
@@ -65,7 +88,7 @@ section{
 }
 
 h2{
-  color:#38bdf8;
+  color: var(--primary-color);
   margin-bottom:10px;
 }
 
@@ -73,19 +96,14 @@ ul{
   padding-left:20px;
 }
 
-.note{
-  margin-top:10px;
-  color:#facc15;
-}
-
-/* PROJECT */
 .project{
-  background:#0f172a;
+  background: var(--project-bg);
   padding:20px;
   border-radius:10px;
+  box-shadow:0 10px 25px var(--shadow-color);
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 footer{
   text-align:center;
   padding:20px;
@@ -114,7 +132,7 @@ input{display:none}
   transform-style:preserve-3d;
   transition:1.1s ease;
   border-radius:14px;
-  box-shadow:0 25px 60px rgba(0,0,0,.6);
+  box-shadow:0 25px 60px var(--shadow-color);
 }
 
 .side{
@@ -122,7 +140,7 @@ input{display:none}
   inset:0;
   padding:28px;
   backface-visibility:hidden;
-  background:linear-gradient(145deg,#0f172a,#020617);
+  background:linear-gradient(145deg,var(--card-bg),var(--bg-color));
 }
 
 .back{
@@ -146,12 +164,53 @@ input{display:none}
 #p3{z-index:1}
 
 /* FLIP LOGIC */
-#c1:checked ~ .scene .book #p1{
-  transform:rotateY(-180deg);
+#c1:checked ~ .scene .book #p1{ transform:rotateY(-180deg); }
+#c2:checked ~ .scene .book #p2{ transform:rotateY(-180deg); }
+#c3:checked ~ .scene .book #p3{ transform:rotateY(-180deg); }
+
+/* ===== DARK/LIGHT TOGGLE ===== */
+.toggle-container{
+  position:fixed;
+  top:20px;
+  right:20px;
+  z-index:999;
 }
-#c2:checked ~ .scene .book #p2{
-  transform:rotateY(-180deg);
+
+.toggle-label{
+  position:relative;
+  display:inline-block;
+  width:50px;
+  height:25px;
+  cursor:pointer;
 }
-#c3:checked ~ .scene .book #p3{
-  transform:rotateY(-180deg);
+
+.toggle-label input{
+  display:none;
+}
+
+.slider{
+  position:absolute;
+  top:0;
+  left:0;
+  width:50px;
+  height:25px;
+  background-color:#888;
+  border-radius:25px;
+  transition:0.4s;
+}
+
+.slider::before{
+  content:"";
+  position:absolute;
+  width:21px;
+  height:21px;
+  left:2px;
+  top:2px;
+  background-color: var(--primary-color);
+  border-radius:50%;
+  transition:0.4s;
+}
+
+#dark-toggle:checked + .slider::before{
+  transform: translateX(25px);
 }
