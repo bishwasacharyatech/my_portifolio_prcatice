@@ -1,14 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Learning the Basics</title>
+    <title>Learning the Basics | My Real Dog Code</title>
     <style>
-        /* Keeping it black for the brand aesthetic */
+        /* Signature Brand Aesthetic */
         body { 
             background: #000000; 
             color: #38bdf8; /* Neon Blue */
-            font-family: sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             padding: 50px;
+            text-align: center;
+        }
+
+        h1 {
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        ul {
+            display: inline-block;
+            text-align: left;
+            color: #fff;
+        }
+
+        /* --- MODERN HOVER BUTTON --- */
+        .neon-button {
+            background: transparent;
+            color: #38bdf8;
+            border: 2px solid #38bdf8;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            position: relative;
+            outline: none;
+        }
+
+        /* The Hover Effect */
+        .neon-button:hover {
+            background: #38bdf8;
+            color: #000;
+            box-shadow: 0 0 20px #38bdf8, 0 0 40px #38bdf8;
+            transform: scale(1.05);
+        }
+
+        .neon-button:active {
+            transform: scale(0.95);
+        }
+
+        /* Fixing the image styling */
+        img {
+            border-radius: 50%;
+            border: 2px solid #38bdf8;
+            margin-top: 20px;
+            width: 150px;
         }
     </style>
 </head>
@@ -25,9 +74,13 @@
         <li>Coffee</li>
     </ul>
 
-    <img src="dog-logo.png" alt="My Dog Logo" 
+    <br>
 
-    <p>Wait, why is the image not showing up? help!</p>
+    <img src="https://placedog.net/150/150" alt="My Dog Logo"> 
+
+    <p>The image is fixed now! I forgot to close the tag <code>&gt;</code></p>
+
+    <button class="neon-button">finally</button>
 
 </body>
 </html>
