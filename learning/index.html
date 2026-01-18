@@ -3,27 +3,38 @@
 <head>
     <title>Learning the Basics | My Real Dog Code</title>
     <style>
-        /* Signature Brand Aesthetic */
         body { 
             background: #000000; 
-            color: #38bdf8; /* Neon Blue */
+            color: #38bdf8;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             padding: 50px;
             text-align: center;
         }
 
-        h1 {
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        ul {
+        /* ===== TOP FUTURISTIC BRAND TAG ===== */
+        .brand-tag {
             display: inline-block;
-            text-align: left;
-            color: #fff;
+            padding: 10px 25px;
+            margin-bottom: 30px;
+            border-radius: 30px;
+            font-size: 14px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #38bdf8;
+            border: 1px solid #38bdf8;
+            box-shadow: 0 0 10px #38bdf8;
+            animation: glow 2s infinite alternate;
         }
 
-        /* --- MODERN HOVER BUTTON --- */
+        @keyframes glow {
+            from { box-shadow: 0 0 5px #38bdf8; }
+            to { box-shadow: 0 0 20px #38bdf8; }
+        }
+
+        h1 { letter-spacing: 2px; text-transform: uppercase; }
+
+        ul { display: inline-block; text-align: left; color: #fff; }
+
         .neon-button {
             background: transparent;
             color: #38bdf8;
@@ -40,7 +51,6 @@
             outline: none;
         }
 
-        /* The Hover Effect */
         .neon-button:hover {
             background: #38bdf8;
             color: #000;
@@ -48,38 +58,37 @@
             transform: scale(1.05);
         }
 
-        .neon-button:active {
-            transform: scale(0.95);
-        }
+        .neon-button:active { transform: scale(0.95); }
 
-        /* Fixing the image styling */
         img {
             border-radius: 50%;
             border: 2px solid #38bdf8;
             margin-top: 20px;
             width: 150px;
         }
+
         input {
-    background: #111;
-    border: 1px solid #38bdf8;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 5px;
-    outline: none;
-}
+            background: #111;
+            border: 1px solid #38bdf8;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 5px;
+            outline: none;
+        }
 
-input:focus {
-    box-shadow: 0 0 10px #38bdf8;
-}
+        input:focus { box-shadow: 0 0 10px #38bdf8; }
 
-.login-container {
-    margin-top: 30px;
-    padding: 20px;
-}
+        .login-container {
+            margin-top: 30px;
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
+
+    <!-- ===== NEW BEGINNING TAG ===== -->
+    <div class="brand-tag">Bishwas acharya</div>
 
     <h1>My First Coding Project</h1>
 
@@ -92,26 +101,22 @@ input:focus {
         <li>Coffee</li>
     </ul>
 
-    <br>
-
     <img src="https://placedog.net/150/150" alt="My Dog Logo"> 
 
     <p>The image is fixed now! I forgot to close the tag <code>&gt;</code></p>
-<hr style="border: 0.5px solid #38bdf8; margin: 40px 0;">
 
-<div class="login-container">
-    <h2>Member Login</h2>
-    <form>
-        <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username" placeholder="Enter Username"><br><br>
-        
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password" placeholder="Enter Password"><br><br>
-        
-        <button type="submit" class="neon-button">Login</button>
-    </form>
-</div>
-    <button class="neon-button">finally</button>
+    <hr style="border: 0.5px solid #38bdf8; margin: 40px 0;">
+
+    <div class="login-container">
+        <h2>Member Login</h2>
+        <form>
+            <input type="text" placeholder="Enter Username"><br><br>
+            <input type="password" placeholder="Enter Password"><br><br>
+            <button type="submit" class="neon-button">Login</button>
+        </form>
+    </div>
+
+    <button class="neon-button">Finally</button>
 
 </body>
 </html>
