@@ -1,7 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Learning the Basics | My Real Dog Code</title>
+    <meta charset="UTF-8">
+    <title>Bishwas Acharya | Futuristic Cyber Login UI</title>
+
+    <!-- SEO META -->
+    <meta name="description" content="Futuristic cyber login page UI design by Bishwas Acharya using pure HTML and CSS. Neon glassmorphism interface with modern hacker style effects.">
+    <meta name="keywords" content="Bishwas Acharya, futuristic login page, cyber login ui, html css login form, neon login page, glassmorphism ui, hacker ui design">
+    <meta name="author" content="Bishwas Acharya">
+
     <style>
         body { 
             background: #000000; 
@@ -12,14 +19,10 @@
             overflow: hidden;
         }
 
-        /* ===== SCANLINE OVERLAY ===== */
         body::before {
             content: "";
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            inset: 0;
             background: repeating-linear-gradient(
                 to bottom,
                 rgba(56,189,248,0.03),
@@ -27,8 +30,8 @@
                 transparent 1px,
                 transparent 3px
             );
-            pointer-events: none;
             animation: scan 6s linear infinite;
+            pointer-events: none;
         }
 
         @keyframes scan {
@@ -36,11 +39,10 @@
             to   { transform: translateY(100%); }
         }
 
-        /* ===== TOP FUTURISTIC BRAND TAG ===== */
         .brand-tag {
             display: inline-block;
             padding: 10px 25px;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             border-radius: 30px;
             font-size: 14px;
             letter-spacing: 3px;
@@ -56,23 +58,32 @@
             to { box-shadow: 0 0 20px #38bdf8; }
         }
 
-        /* ===== CYBER SUBTITLE ===== */
         .subtitle {
             font-size: 13px;
             letter-spacing: 3px;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
             color: #7dd3fc;
-            animation: flicker 3s infinite;
         }
 
-        @keyframes flicker {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.4; }
+        /* NEW 2 CYBER LINES */
+        .tagline {
+            font-size: 12px;
+            letter-spacing: 4px;
+            color: #38bdf8;
+            margin-bottom: 30px;
+            opacity: 0.8;
         }
 
-        h1 { letter-spacing: 2px; text-transform: uppercase; }
+        h1 {
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
 
-        ul { display: inline-block; text-align: left; color: #fff; }
+        ul {
+            display: inline-block;
+            text-align: left;
+            color: #fff;
+        }
 
         .neon-button {
             background: transparent;
@@ -84,10 +95,8 @@
             text-transform: uppercase;
             cursor: pointer;
             border-radius: 50px;
-            transition: all 0.3s ease;
+            transition: 0.3s;
             margin-top: 20px;
-            position: relative;
-            outline: none;
         }
 
         .neon-button:hover {
@@ -96,8 +105,6 @@
             box-shadow: 0 0 20px #38bdf8, 0 0 40px #38bdf8;
             transform: scale(1.05);
         }
-
-        .neon-button:active { transform: scale(0.95); }
 
         img {
             border-radius: 50%;
@@ -112,23 +119,35 @@
             color: white;
             padding: 10px;
             border-radius: 5px;
-            margin-top: 5px;
+            margin-top: 8px;
             outline: none;
         }
 
-        input:focus { box-shadow: 0 0 10px #38bdf8; }
+        input:focus {
+            box-shadow: 0 0 10px #38bdf8;
+        }
 
         .login-container {
             margin-top: 30px;
             padding: 20px;
         }
+
+        footer {
+            margin-top: 40px;
+            font-size: 12px;
+            color: #38bdf8;
+            opacity: 0.6;
+        }
     </style>
 </head>
 <body>
 
-    <!-- ===== CYBER INTRO HEADER ===== -->
     <div class="brand-tag">Bishwas Acharya</div>
     <div class="subtitle">FRONTEND DEVELOPER • CYBER UI DESIGNER</div>
+
+    <!-- ADDED 2 LINES -->
+    <div class="tagline">SECURING THE FUTURE WITH CODE</div>
+    <div class="tagline">DESIGNING INTERFACES FOR THE NEXT GENERATION</div>
 
     <h1>My First Coding Project</h1>
 
@@ -137,26 +156,28 @@
     <h3>My Favorites:</h3>
     <ul>
         <li>Pizza</li>
-        <li>Code (obviously)</li>
-        <li>Coffee</li>
+        <li>Clean Code</li>
+        <li>Late Night Debugging</li>
     </ul>
 
-    <img src="https://placedog.net/150/150" alt="My Dog Logo"> 
+    <img src="https://placedog.net/150/150" alt="Bishwas Acharya Logo">
 
-    <p>The image is fixed now! I forgot to close the tag <code>&gt;</code></p>
-
-    <hr style="border: 0.5px solid #38bdf8; margin: 40px 0;">
+    <hr style="border:0.5px solid #38bdf8; margin:40px 0;">
 
     <div class="login-container">
         <h2>Member Login</h2>
         <form>
-            <input type="text" placeholder="Enter Username"><br><br>
-            <input type="password" placeholder="Enter Password"><br><br>
+            <input type="text" placeholder="Enter Username"><br>
+            <input type="password" placeholder="Enter Password"><br>
             <button type="submit" class="neon-button">Login</button>
         </form>
     </div>
 
-    <button class="neon-button">Finally</button>
+    <button class="neon-button">Access System</button>
+
+    <footer>
+        © 2026 Bishwas Acharya | Cyber UI Laboratory
+    </footer>
 
 </body>
 </html>
