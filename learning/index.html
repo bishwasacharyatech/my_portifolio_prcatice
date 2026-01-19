@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bishwas Acharya | Futuristic Cyber Login UI</title>
+    <title>Bishwas Acharya | Cyber Security Aspirant</title>
 
-    <meta name="description" content="Futuristic cyber login page UI design by Bishwas Acharya using pure HTML and CSS. Neon glassmorphism interface with modern hacker style effects.">
-    <meta name="keywords" content="Bishwas Acharya, futuristic login page, cyber login ui, html css login form, neon login page, glassmorphism ui, hacker ui design">
+    <meta name="description" content="Cybersecurity student portal and futuristic UI design by Bishwas Acharya. Currently learning the fundamentals of ethical hacking and web security.">
     <meta name="author" content="Bishwas Acharya">
 
     <style>
         body { 
             background: #000000; 
             color: #38bdf8;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            padding: 50px;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            padding: 50px 20px;
             text-align: center;
-            overflow-x: hidden; /* Prevent horizontal scroll */
+            overflow-x: hidden;
         }
 
         /* Animated Scanline Overlay */
@@ -31,9 +30,9 @@
                 transparent 1px,
                 transparent 3px
             );
-            animation: scan 6s linear infinite;
+            animation: scan 8s linear infinite;
             pointer-events: none;
-            z-index: 10;
+            z-index: 100;
         }
 
         @keyframes scan {
@@ -41,177 +40,199 @@
             to   { transform: translateY(100%); }
         }
 
-        /* NAME TAG STYLE */
+        /* NAME TAG WITH HOVER EFFECT */
         .brand-tag {
             display: inline-block;
-            padding: 10px 25px;
-            margin-bottom: 8px;
-            border-radius: 30px;
-            font-size: 14px;
-            letter-spacing: 3px;
+            padding: 12px 30px;
+            margin-bottom: 10px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 4px;
             text-transform: uppercase;
             color: #38bdf8;
             border: 1px solid #38bdf8;
-            box-shadow: 0 0 10px #38bdf8;
-            animation: glow 2s infinite alternate;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Smooth pop effect */
-        }
-
-        /* THE HOVER EFFECT FOR THE NAME ONLY */
-        .brand-tag:hover {
-            background: #38bdf8;
-            color: #000000;
-            box-shadow: 0 0 30px #38bdf8, 0 0 50px #38bdf8;
-            transform: scale(1.1) rotate(-1deg);
+            box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             cursor: pointer;
         }
 
-        @keyframes glow {
-            from { box-shadow: 0 0 5px #38bdf8; }
-            to { box-shadow: 0 0 20px #38bdf8; }
+        .brand-tag:hover {
+            background: #38bdf8;
+            color: #000;
+            box-shadow: 0 0 30px #38bdf8, 0 0 60px #38bdf8;
+            transform: scale(1.1) translateY(-5px);
         }
 
-        .subtitle {
-            font-size: 13px;
-            letter-spacing: 3px;
-            margin-bottom: 10px;
+        .status-badge {
+            font-size: 11px;
             color: #7dd3fc;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+            display: block;
         }
 
-        .tagline {
-            font-size: 12px;
-            letter-spacing: 4px;
-            color: #38bdf8;
-            margin-bottom: 10px;
-            opacity: 0.8;
+        .cyber-box {
+            background: rgba(56, 189, 248, 0.05);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            padding: 25px;
+            border-radius: 15px;
+            display: inline-block;
+            max-width: 500px;
+            margin: 20px auto;
+            backdrop-filter: blur(5px);
         }
 
         h1 {
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             text-transform: uppercase;
-            margin-top: 30px;
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+
+        .learning-note {
+            font-style: italic;
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+
+        /* MISSION SECTION */
+        .mission-title {
+            color: #f0f9ff;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #38bdf8;
+            display: inline-block;
+            padding-bottom: 5px;
         }
 
         ul {
-            display: inline-block;
             text-align: left;
-            color: #fff;
+            display: inline-block;
+            list-style: none;
+            padding: 0;
+            color: #e2e8f0;
         }
 
-        /* BUTTON STYLES */
-        .neon-button {
-            background: transparent;
+        ul li::before {
+            content: "> ";
             color: #38bdf8;
-            border: 2px solid #38bdf8;
-            padding: 15px 30px;
-            font-size: 18px;
             font-weight: bold;
-            text-transform: uppercase;
-            cursor: pointer;
-            border-radius: 50px;
-            transition: 0.3s;
-            margin-top: 20px;
-            position: relative;
-            overflow: hidden;
         }
 
-        .neon-button:hover {
-            background: #38bdf8;
-            color: #000;
-            box-shadow: 0 0 20px #38bdf8, 0 0 40px #38bdf8;
-            transform: scale(1.05);
+        ul li {
+            margin: 10px 0;
+            font-family: 'Courier New', Courier, monospace;
         }
 
-        img {
-            border-radius: 50%;
-            border: 2px solid #38bdf8;
-            margin-top: 20px;
-            width: 150px;
-            transition: 0.5s;
-        }
-
-        img:hover {
-            filter: hue-rotate(90deg) brightness(1.2);
-            transform: rotate(360deg);
-        }
-
-        /* FORM STYLES */
+        /* FORM & BUTTONS */
         input {
-            background: #111;
+            background: #0a0a0a;
             border: 1px solid #38bdf8;
-            color: white;
+            color: #fff;
             padding: 12px;
-            border-radius: 5px;
-            margin-top: 10px;
-            width: 250px;
+            border-radius: 4px;
+            margin: 8px 0;
+            width: 260px;
             outline: none;
             text-align: center;
             transition: 0.3s;
         }
 
         input:focus {
-            box-shadow: 0 0 15px #38bdf8;
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.8);
             border-color: #fff;
         }
 
-        .login-container {
-            margin-top: 30px;
-            padding: 30px;
-            background: rgba(56, 189, 248, 0.05);
-            display: inline-block;
-            border-radius: 15px;
-            border: 1px solid rgba(56, 189, 248, 0.2);
+        .neon-button {
+            background: transparent;
+            color: #38bdf8;
+            border: 2px solid #38bdf8;
+            padding: 12px 35px;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: 0.3s;
+            margin-top: 15px;
+            letter-spacing: 2px;
+        }
+
+        .neon-button:hover {
+            background: #38bdf8;
+            color: #000;
+            box-shadow: 0 0 20px #38bdf8;
+            transform: translateY(-2px);
+        }
+
+        img {
+            border-radius: 50%;
+            border: 2px solid #38bdf8;
+            margin: 30px 0;
+            width: 120px;
+            filter: grayscale(50%);
+            transition: 0.5s;
+        }
+
+        img:hover {
+            filter: grayscale(0%) drop-shadow(0 0 15px #38bdf8);
+            transform: rotate(5deg);
         }
 
         footer {
-            margin-top: 60px;
-            padding-bottom: 20px;
-            font-size: 12px;
-            color: #38bdf8;
-            opacity: 0.6;
+            margin-top: 50px;
+            font-size: 11px;
+            letter-spacing: 1px;
+            opacity: 0.5;
+        }
+
+        .highlight {
+            color: #fff;
+            text-shadow: 0 0 5px #38bdf8;
         }
     </style>
 </head>
 <body>
 
     <div class="brand-tag">Bishwas Acharya</div>
-    <div class="subtitle">FRONTEND DEVELOPER • CYBER UI DESIGNER</div>
+    <span class="status-badge">Student ID: #2026-BISHWAS</span>
 
-    <div class="tagline">SECURING THE FUTURE WITH CODE</div>
-    <div class="tagline" style="margin-bottom: 30px;">DESIGNING INTERFACES FOR THE NEXT GENERATION</div>
+    <div class="cyber-box">
+        <h1>Mission: Cybersecurity</h1>
+        <p class="learning-note">Status: <span class="highlight">Learning the Basics</span> of Digital Defense</p>
+        
+        <p>I've started my journey into the world of code. While I am just beginning with HTML and CSS, my ultimate goal is to become a <strong>Cybersecurity Professional</strong>.</p>
+        
+        <hr style="border:0; border-top: 1px solid rgba(56, 189, 248, 0.2); margin: 20px 0;">
 
-    <h1>My First Coding Project</h1>
-
-    <p>I am learning how to use tags today. It's actually pretty fun.</p>
-
-    <div style="margin: 20px 0;">
-        <h3>My Favorites:</h3>
+        <div class="mission-title">Core Objectives</div><br>
         <ul>
-            <li>Pizza</li>
-            <li>Clean Code</li>
-            <li>Late Night Debugging</li>
+            <li>Mastering Network Security</li>
+            <li>Protecting Digital Infrastructures</li>
+            <li>Learning Ethical Hacking Fundamentals</li>
+            <li>Developing Secure Code Practices</li>
         </ul>
     </div>
 
-    <img src="https://placedog.net/150/150" alt="Bishwas Acharya Logo">
+    <br>
+    <img src="https://placedog.net/150/150" alt="Bishwas Acharya Profile">
 
-    <hr style="border:0; border-top: 1px solid rgba(56, 189, 248, 0.3); margin:40px auto; width: 50%;">
-
-    <div class="login-container">
-        <h2 style="margin-top:0;">Member Login</h2>
+    <div class="cyber-box">
+        <h2 style="margin-top:0; font-size: 18px; letter-spacing: 2px;">SECURE ACCESS PORTAL</h2>
         <form>
-            <input type="text" placeholder="Enter Username"><br>
-            <input type="password" placeholder="Enter Password"><br>
-            <button type="submit" class="neon-button">Login</button>
+            <input type="text" placeholder="TERMINAL ID" autocomplete="off"><br>
+            <input type="password" placeholder="ENCRYPTION KEY"><br>
+            <button type="submit" class="neon-button">Initialize Login</button>
         </form>
     </div>
 
-    <div style="margin-top: 30px;">
-        <button class="neon-button">Access System</button>
-    </div>
-
     <footer>
-        © 2026 Bishwas Acharya | Cyber UI Laboratory
+        &copy; 2026 BISHWAS ACHARYA | SYSTEM ARCHIVE 01 <br>
+        <span style="font-size: 9px;">ENCRYPTED CONNECTION ESTABLISHED</span>
     </footer>
 
 </body>
