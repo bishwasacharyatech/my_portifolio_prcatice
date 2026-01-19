@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bishwas Acharya | Cyber Security Aspirant</title>
 
-    <meta name="description" content="Cybersecurity student portal and futuristic UI design by Bishwas Acharya. Currently learning the fundamentals of ethical hacking and web security.">
+    <meta name="description" content="Cybersecurity student portal. Currently learning the fundamentals of ethical hacking and web security.">
     <meta name="author" content="Bishwas Acharya">
 
     <style>
@@ -82,6 +82,7 @@
             max-width: 500px;
             margin: 20px auto;
             backdrop-filter: blur(5px);
+            text-align: center;
         }
 
         h1 {
@@ -128,6 +129,35 @@
             font-family: 'Courier New', Courier, monospace;
         }
 
+        /* NEW SHIELD ICON (Replacing Dog Image) */
+        .shield-icon {
+            width: 80px;
+            height: 90px;
+            background-color: transparent;
+            border: 3px solid #38bdf8;
+            margin: 30px auto;
+            border-radius: 0 0 50% 50%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+            transition: 0.5s;
+        }
+
+        .shield-icon::after {
+            content: "LOCKED";
+            font-size: 10px;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        .shield-icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 40px #38bdf8;
+            background: rgba(56, 189, 248, 0.1);
+        }
+
         /* FORM & BUTTONS */
         input {
             background: #0a0a0a;
@@ -169,20 +199,6 @@
             transform: translateY(-2px);
         }
 
-        img {
-            border-radius: 50%;
-            border: 2px solid #38bdf8;
-            margin: 30px 0;
-            width: 120px;
-            filter: grayscale(50%);
-            transition: 0.5s;
-        }
-
-        img:hover {
-            filter: grayscale(0%) drop-shadow(0 0 15px #38bdf8);
-            transform: rotate(5deg);
-        }
-
         footer {
             margin-top: 50px;
             font-size: 11px;
@@ -199,40 +215,39 @@
 <body>
 
     <div class="brand-tag">Bishwas Acharya</div>
-    <span class="status-badge">Student ID: #2026-BISHWAS</span>
+    <span class="status-badge">OPERATOR STATUS: ACTIVE</span>
 
     <div class="cyber-box">
-        <h1>Mission: Cybersecurity</h1>
-        <p class="learning-note">Status: <span class="highlight">Learning the Basics</span> of Digital Defense</p>
+        <h1>Aim: Cybersecurity</h1>
+        <p class="learning-note">Progress: <span class="highlight">Level 01</span> | Learning Basics</p>
         
-        <p>I've started my journey into the world of code. While I am just beginning with HTML and CSS, my ultimate goal is to become a <strong>Cybersecurity Professional</strong>.</p>
+        <p>I am a student currently exploring the foundations of web development with the ultimate goal of mastering **Information Security** and **Cyber Defense**.</p>
         
         <hr style="border:0; border-top: 1px solid rgba(56, 189, 248, 0.2); margin: 20px 0;">
 
-        <div class="mission-title">Core Objectives</div><br>
+        <div class="mission-title">Primary Learning Goals</div><br>
         <ul>
-            <li>Mastering Network Security</li>
-            <li>Protecting Digital Infrastructures</li>
-            <li>Learning Ethical Hacking Fundamentals</li>
-            <li>Developing Secure Code Practices</li>
+            <li>HTML/CSS Fundamentals</li>
+            <li>Encryption Principles</li>
+            <li>Ethical Hacking Basics</li>
+            <li>System Hardening</li>
         </ul>
     </div>
 
-    <br>
-    <img src="https://placedog.net/150/150" alt="Bishwas Acharya Profile">
+    <div class="shield-icon"></div>
 
     <div class="cyber-box">
-        <h2 style="margin-top:0; font-size: 18px; letter-spacing: 2px;">SECURE ACCESS PORTAL</h2>
+        <h2 style="margin-top:0; font-size: 18px; letter-spacing: 2px;">ENCRYPTED LOGIN</h2>
         <form>
-            <input type="text" placeholder="TERMINAL ID" autocomplete="off"><br>
-            <input type="password" placeholder="ENCRYPTION KEY"><br>
-            <button type="submit" class="neon-button">Initialize Login</button>
+            <input type="text" placeholder="UID: BISHWAS_01" autocomplete="off"><br>
+            <input type="password" placeholder="PASSKEY"><br>
+            <button type="submit" class="neon-button">Authenticate</button>
         </form>
     </div>
 
     <footer>
-        &copy; 2026 BISHWAS ACHARYA | SYSTEM ARCHIVE 01 <br>
-        <span style="font-size: 9px;">ENCRYPTED CONNECTION ESTABLISHED</span>
+        &copy; 2026 BISHWAS ACHARYA | SECURE TERMINAL <br>
+        <span style="font-size: 9px;">NO DOGS DETECTED. SYSTEM CLEAN.</span>
     </footer>
 
 </body>
