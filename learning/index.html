@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bishwas Acharya | Futuristic Cyber Login UI</title>
 
-    <!-- SEO META -->
     <meta name="description" content="Futuristic cyber login page UI design by Bishwas Acharya using pure HTML and CSS. Neon glassmorphism interface with modern hacker style effects.">
     <meta name="keywords" content="Bishwas Acharya, futuristic login page, cyber login ui, html css login form, neon login page, glassmorphism ui, hacker ui design">
     <meta name="author" content="Bishwas Acharya">
@@ -16,9 +16,10 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             padding: 50px;
             text-align: center;
-            overflow: hidden;
+            overflow-x: hidden; /* Prevent horizontal scroll */
         }
 
+        /* Animated Scanline Overlay */
         body::before {
             content: "";
             position: fixed;
@@ -32,6 +33,7 @@
             );
             animation: scan 6s linear infinite;
             pointer-events: none;
+            z-index: 10;
         }
 
         @keyframes scan {
@@ -39,6 +41,7 @@
             to   { transform: translateY(100%); }
         }
 
+        /* NAME TAG STYLE */
         .brand-tag {
             display: inline-block;
             padding: 10px 25px;
@@ -51,6 +54,16 @@
             border: 1px solid #38bdf8;
             box-shadow: 0 0 10px #38bdf8;
             animation: glow 2s infinite alternate;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Smooth pop effect */
+        }
+
+        /* THE HOVER EFFECT FOR THE NAME ONLY */
+        .brand-tag:hover {
+            background: #38bdf8;
+            color: #000000;
+            box-shadow: 0 0 30px #38bdf8, 0 0 50px #38bdf8;
+            transform: scale(1.1) rotate(-1deg);
+            cursor: pointer;
         }
 
         @keyframes glow {
@@ -65,18 +78,18 @@
             color: #7dd3fc;
         }
 
-        /* NEW 2 CYBER LINES */
         .tagline {
             font-size: 12px;
             letter-spacing: 4px;
             color: #38bdf8;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
             opacity: 0.8;
         }
 
         h1 {
             letter-spacing: 3px;
             text-transform: uppercase;
+            margin-top: 30px;
         }
 
         ul {
@@ -85,6 +98,7 @@
             color: #fff;
         }
 
+        /* BUTTON STYLES */
         .neon-button {
             background: transparent;
             color: #38bdf8;
@@ -97,6 +111,8 @@
             border-radius: 50px;
             transition: 0.3s;
             margin-top: 20px;
+            position: relative;
+            overflow: hidden;
         }
 
         .neon-button:hover {
@@ -111,29 +127,45 @@
             border: 2px solid #38bdf8;
             margin-top: 20px;
             width: 150px;
+            transition: 0.5s;
         }
 
+        img:hover {
+            filter: hue-rotate(90deg) brightness(1.2);
+            transform: rotate(360deg);
+        }
+
+        /* FORM STYLES */
         input {
             background: #111;
             border: 1px solid #38bdf8;
             color: white;
-            padding: 10px;
+            padding: 12px;
             border-radius: 5px;
-            margin-top: 8px;
+            margin-top: 10px;
+            width: 250px;
             outline: none;
+            text-align: center;
+            transition: 0.3s;
         }
 
         input:focus {
-            box-shadow: 0 0 10px #38bdf8;
+            box-shadow: 0 0 15px #38bdf8;
+            border-color: #fff;
         }
 
         .login-container {
             margin-top: 30px;
-            padding: 20px;
+            padding: 30px;
+            background: rgba(56, 189, 248, 0.05);
+            display: inline-block;
+            border-radius: 15px;
+            border: 1px solid rgba(56, 189, 248, 0.2);
         }
 
         footer {
-            margin-top: 40px;
+            margin-top: 60px;
+            padding-bottom: 20px;
             font-size: 12px;
             color: #38bdf8;
             opacity: 0.6;
@@ -145,27 +177,28 @@
     <div class="brand-tag">Bishwas Acharya</div>
     <div class="subtitle">FRONTEND DEVELOPER • CYBER UI DESIGNER</div>
 
-    <!-- ADDED 2 LINES -->
     <div class="tagline">SECURING THE FUTURE WITH CODE</div>
-    <div class="tagline">DESIGNING INTERFACES FOR THE NEXT GENERATION</div>
+    <div class="tagline" style="margin-bottom: 30px;">DESIGNING INTERFACES FOR THE NEXT GENERATION</div>
 
     <h1>My First Coding Project</h1>
 
     <p>I am learning how to use tags today. It's actually pretty fun.</p>
 
-    <h3>My Favorites:</h3>
-    <ul>
-        <li>Pizza</li>
-        <li>Clean Code</li>
-        <li>Late Night Debugging</li>
-    </ul>
+    <div style="margin: 20px 0;">
+        <h3>My Favorites:</h3>
+        <ul>
+            <li>Pizza</li>
+            <li>Clean Code</li>
+            <li>Late Night Debugging</li>
+        </ul>
+    </div>
 
     <img src="https://placedog.net/150/150" alt="Bishwas Acharya Logo">
 
-    <hr style="border:0.5px solid #38bdf8; margin:40px 0;">
+    <hr style="border:0; border-top: 1px solid rgba(56, 189, 248, 0.3); margin:40px auto; width: 50%;">
 
     <div class="login-container">
-        <h2>Member Login</h2>
+        <h2 style="margin-top:0;">Member Login</h2>
         <form>
             <input type="text" placeholder="Enter Username"><br>
             <input type="password" placeholder="Enter Password"><br>
@@ -173,7 +206,9 @@
         </form>
     </div>
 
-    <button class="neon-button">Access System</button>
+    <div style="margin-top: 30px;">
+        <button class="neon-button">Access System</button>
+    </div>
 
     <footer>
         © 2026 Bishwas Acharya | Cyber UI Laboratory
